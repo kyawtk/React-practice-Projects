@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container{
+    min-height: 600px;
+    background-color: aliceblue;
+    max-width: 500px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+}
+
+.btn{
+   
+    font-weight: bold;
+    font-size: 3rem;
+    background-color: azure;
+    
+    border: 2px solid black;
+    outline: none;
+}
+
+.hot{
+    background-color: rgb(255, 73, 73);
+}
+.cold{
+    background-color: rgb(71, 71, 255);
+}
