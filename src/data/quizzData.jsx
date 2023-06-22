@@ -1,4 +1,23 @@
-export  const quizzData = [
+function randomizeAnswerOptions(quizzData) {
+  const randomizedData = quizzData.map((question) => {
+    const { answerOptions } = question;
+    const randomizedOptions = shuffleArray(answerOptions);
+    return { ...question, answerOptions: randomizedOptions };
+  });
+
+  return randomizedData;
+}
+
+function shuffleArray(array) {
+  const shuffledArray = [...array];
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+}
+
+  const quizzData = [
     {
       "question": "What is the largest species of penguin?",
       "answerOptions": [
@@ -211,3 +230,5 @@ export  const quizzData = [
     }
   ]
   
+let newData = randomizeAnswerOptions(quizzData)
+export {newData as quizzData}
